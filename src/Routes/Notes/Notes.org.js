@@ -74,13 +74,13 @@ export default class NotesContainer extends React.Component {
           <Subtitle>Taking notes while we learn.</Subtitle>
         </Header>
         <Query query={GET_NOTES}>
-          {({data}) => 
+          {({ data }) =>
             data.notes
               ? data.notes.map(note => (
-                <Link to={`/edit/${note.id}`} key={note.id}>
-                  <Note>{note.title}</Note>
-                </Link>
-                )) 
+                  <Link to={`/edit/${note.id}`} key={note.id}>
+                    <Note>{note.title}</Note>
+                  </Link>
+                ))
               : null
           }
         </Query>
