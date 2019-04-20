@@ -8,7 +8,7 @@ export const defaults = {
             __typename: "Note",
             id:1,
             title: "First",
-            content: "Second"
+            content: "- Second"
         }
     ]
 };
