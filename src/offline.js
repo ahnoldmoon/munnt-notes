@@ -9,3 +9,18 @@ export const saveNotes = (cache) => {
         console.log(error);
     }
 };
+
+export const restoreNotes = () => {
+    const notes = localStorage.getItem("notes");
+    // console.log(notes)
+    if(notes){
+        try {
+            const parsedNotes = JSON.parse(notes);
+            return parsedNotes;
+        } catch (error) {
+            console.log(error);
+            return [];
+        }
+    }
+    return [];
+}

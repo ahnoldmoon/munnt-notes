@@ -1,17 +1,18 @@
 import { NOTE_FRAGMENT } from "./fragments";
 import { GET_NOTES } from "./queries";
 // import { identity } from "rxjs";
-import { saveNotes } from "./offline";
+import { saveNotes, restoreNotes } from "./offline";
 
 export const defaults = {
-    notes: [
+    notes: restoreNotes()
+    // [
         // {
         //     __typename: "Note",
         //     id:1,
         //     title: "First",
         //     content: "- Second"
         // }
-    ]
+    // ]
 };
 
 export const typeDefs = [
