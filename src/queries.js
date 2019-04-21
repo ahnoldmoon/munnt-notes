@@ -18,3 +18,11 @@ export const GET_NOTE = gql`
     }
     ${NOTE_FRAGMENT}
 `;
+
+// {
+//     notes {
+//         title
+//         content
+//     }
+// }
+  
